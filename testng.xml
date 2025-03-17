@@ -1,0 +1,45 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Suite1" verbose="1" thread-count="2" parallel="tests">
+    <!--<test name="TestGroups" thread-count="2" parallel="methods" enabled="false">
+        <parameter name="browser" value="EDGE"/>
+        <groups>
+            <run>
+                <include name="grouptest"/>
+&lt;!&ndash;                <exclude name="grouptest"/>&ndash;&gt;
+            </run>
+        </groups>
+        &lt;!&ndash;<classes>
+            <class name="org.selenium.pom.tests.MyFirstTestCase"/>
+        </classes>&ndash;&gt;
+    </test>-->
+    <test name="CHROME" thread-count="6" parallel="methods">
+        <!-- <parameter name="browser" value="EDGE"/> -->
+        <parameter name="browser" value="CHROME"/>
+        <packages>
+            <package name="org.selenium.pom.tests"/>
+        </packages>
+        <!--<classes>
+            <class name="org.selenium.pom.tests.AddToCartTest">
+                <methods>
+                    <include name="addToCartFromStorePage"/>
+                    &lt;!&ndash;<include name="loginAndCheckoutUsingDirectBankTransfer"/>&ndash;&gt;
+                </methods>
+            </class>
+        </classes>-->
+    </test>
+   <!-- <test name="EDGE" thread-count="2" parallel="methods" enabled="false">
+        <parameter name="browser" value="EDGE"/>
+        &lt;!&ndash; <packages>
+            <package name="org.selenium.pom.tests"/>
+        </packages> &ndash;&gt;
+        <classes>
+            <class name="org.selenium.pom.tests.MyFirstTestCase">
+&lt;!&ndash;                <methods>&ndash;&gt;
+&lt;!&ndash;                    <include name="guestCheckoutUsingDirectBankTransfer"/>&ndash;&gt;
+&lt;!&ndash;                    <include name="loginAndCheckoutUsingDirectBankTransfer"/>&ndash;&gt;
+&lt;!&ndash;                </methods>&ndash;&gt;
+            </class>
+        </classes>
+    </test>-->
+</suite>
