@@ -45,7 +45,7 @@ public class AddToCartTest extends BaseTest {
         Assert.assertTrue(cartPage.waitForPageToLoadUsingURLContains("/cart/"));
         addAttachmentToAllureReport(browser, "CartPage");
         Allure.attachment("Validation", "Cart page loaded successfully");
-        Assert.assertEquals(cartPage.getProductName(), product.getName());
+        Assert.assertEquals(cartPage.getProductName(), product.getName() + "asaas");
     }
 
     @Test(dataProvider = "getFeaturedProducts", dataProviderClass = MyDataProvider.class, description = "User should be able to add featured products to cart")
